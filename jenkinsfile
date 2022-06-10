@@ -1,9 +1,9 @@
 piepline{
     agent any
     stages{
-        stage('Git download'){
+        stage('Git download') {
             steps{
-                git 'https://github.com/SunilGollapalli/js-e2e-express-server.git'
+                git branch : 'main', url: 'https://github.com/SunilGollapalli/js-e2e-express-server.git'
             }
         }
         stage('build'){
