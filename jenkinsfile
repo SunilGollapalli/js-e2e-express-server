@@ -15,10 +15,10 @@ pipeline{
             }
 
         }
-        post{
-            success{
-                junit '**/TEST-.xml'
-            }
+    post{
+        success{
+            junit '**/TEST-.xml'
         }
+    }
     }
 }
