@@ -1,0 +1,19 @@
+piepline{
+    agent any
+    stages{
+        stage('Git download'){
+            steps{
+                git 'https://github.com/SunilGollapalli/js-e2e-express-server.git'
+            }
+        }
+        stage('build'){
+            steps{
+                sh 'npm install'
+                sh 'npm build'
+                sh 'npm pack'
+
+            }
+
+        }
+    }
+}
